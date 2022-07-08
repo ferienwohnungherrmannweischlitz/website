@@ -1,57 +1,242 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta name="author" content="Uwe Herrmann" />
-    <meta name="keywords" content="Ferienwohnung, Weischlitz, Herrmann, Plauen, Vogtland, Sachsen, Mühlenviertel und Burgsteingebiet, Talsperre Pirk, Oelsnitz, Eisenbahn, SR2, Elstertal"/>
+	<title>Ferienwohnung Herrmann</title>
+
+	<meta name="author" content="Uwe Herrmann" />
+    <meta name="keywords" content="Ferienwohnung, Weischlitz, Herrmann, Plauen, Vogtland, Sachsen, Mühlenviertel und Burgsteingebiet, Talsperre Pirk, Oelsnitz, Eisenbahn, SR2, Elstertal, Familienfeier"/>
     <meta name="description" content="Große geräumige Fereinwohnung in Weischlitz im Vogtland.
-              Bequem und einfach mit dem Auto und der Bahn zu erreichen.
-              Zwischen der 'Spitzenstadt' Plauen und Hof 'In Bayern
-              ganz oben' gelegen.
-              Unweit des Burgsteins und der Talsperre Pirk
-              Schnell zu erreichen ist das Bäderdreieck: Bad Brambach,
-              Bad Elster und Franzensbad (Tschechien).
-              Auch zu dem 'Musikwinkel' Markneukirchen oder
-              Klingenthal mit der Aschbergschanze ist es nicht weit." />
-    <meta name="date" content="2012-12-24" />
+Bequem und einfach mit dem Auto und der Bahn zu erreichen.
+Zwischen der 'Spitzenstadt' Plauen und Hof 'In Bayern ganz oben' gelegen.
+Unweit des Burgsteins und der Talsperre Pirk
+Schnell zu erreichen ist das Bäderdreieck: Bad Brambach, Bad Elster und Franzensbad (Tschechien).
+Auch zu dem 'Musikwinkel' Markneukirchen oder Klingenthal mit der Aschbergschanze ist es nicht weit." />
+    <meta name="date" content="2016-08-05" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Ferienwohnung Herrmann Weischlitz</title>
-    <link rel="stylesheet" type="text/css" href="css/formate.css" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/fwh-ci.css" />
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script>
+		$(function() {
+			$( "[data-role='navbar']" ).navbar();
+			$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+		// Update the contents of the toolbars
+		$( document ).on( "pagecontainerchange", function() {
+			// Each page has a data-title attribute which value is equal to the text of the nav button
+			var current = $( ".ui-page-active" ).jqmData( "title" );
+			// Change the page title
+			$( document ).prop( "title" , "Ferienwohnung Herrmann - " + current);
+			// Change the heading
+			$( "[data-role='header'] h1" ).text( current );
+			//$( "[data-role='header'] h1" ).text( "Ferienwohnung Herrmann Weischlitz - " + current );
+			// Remove active class from nav buttons
+			$( "[data-role='navbar'] a.ui-btn-active" ).removeClass( "ui-btn-active" );
+			// Add active class to current nav button
+			$( "[data-role='navbar'] a" ).each(function() {
+				if ( $( this ).text() === current ) {
+					$( this ).addClass( "ui-btn-active" );
+				}
+			});
+		});
+	</script>
 </head>
 <body>
-    <div id="Logo">
-        <img src="image/fwh_small.png" alt="Ferienwohnung Herrmann Weischlitz" title="Ferienwohnung Herrmann Weischlitz" width="652" height="68" />
-    </div>
-    <div id="Navigation">
-        <p>
-            <img src="image/de.gif" alt="deutsche Sprache" />
-        </p>
-			<a class="element" href="index.html">Home</a>
-			<a class="element" href="anfahrt.html">Anfahrt</a>
-			<a class="element" href="preise.html">Preise</a>
-			<a class="element" href="ferienwohnung.html">Ferienwohnung</a>
-			<a class="element" href="links.html">Links</a>
-        <p>
-            <img src="image/fwh_small.png" alt="Ferienwohnung Herrmann" title="Ferienwohnung Herrmann" width="90%" height="90%" /><br />
-            Plauener Str. 32<br />
-            08538 Weischlitz - Deutschland<br />
-            Tel.: +49 (0)37436 84641<br />
-            E-Mail: <a href="mailto:uwe-herrmann@web.de">uwe-herrmann@web.de</a><br />
-            <a href="http://www.ferienwohnung-herrmann-weischlitz.de">www.ferienwohnung-herrmann-weischlitz.de</a><br />
-            Familie Uwe & Maria Herrmann
-        </p>
-    </div>
-    <div id="Inhalt">
-        <img class="normal" src="image/haus1.jpg" alt="Hausfront mit Ferienwohnung im 1. Stock" />
-        <h1>
-            Willkommen bei der Ferienwohnung Herrmann in Weischlitz
-        </h1>
-        <p>
-            Wir freuen uns, dass Sie zu uns gefunden haben!<br />
-            Hier finden Sie Erholung, frische Luft, eine angenehme Atmonspäre und vielfältige
-            Freizeitaktivitäten in der Nähe.<br />
-            Besuchen Sie uns gerne auch zu Veranstaltungen wie SR2-Rally oder dem Spitzenfest.
-            <!--Details dazu finden Sie <a href=".">hier</a>.-->
-        </p>
-    </div>
+<div data-role="page" data-title="Home" id="home">
+	<div class="impressum">
+		<div class="ui-grid-solo">
+			<div class="ui-block-a"><a href="http://www.ferienwohnung-herrmann-weischlitz.de" alt="Ferienwohnung Herrmann Weischlitz" title="Ferienwohnung Herrmann Weischlitz"><img src="image/fwh_small.png" alt="www.ferienwohnung-herrmann-weischlitz.de" title="www.ferienwohnung-herrmann-weischlitz.de"></a></div>
+			<div class="ui-block-a">Plauener Str. 32, 08538 Weischlitz - Deutschland</div>
+			<div class="ui-block-a">Tel.: +49 (0)37436 84641</div>
+			<div class="ui-block-a">Mobil: +49 (0)171 9647038</div>
+			<div class="ui-block-a">E-Mail: <a href="mailto:uwe-herrmann@web.de">uwe-herrmann@web.de</a></div>
+			<div class="ui-block-a">Familie Uwe & Maria Herrmann</div>
+		</div>
+	</div>
+	<div role="main" class="ui-content">
+		<div class="ui-grid-a">
+			<div class="ui-block-a"><p>Herzlich willkommen in der Ferienwohnung Herrmann in Weischlitz.</p><p>Erholen Sie sich bei uns bei vielfältigen Freizeitaktivitäten und in angenehmer Atmosphäre.</p><p>Besuchen Sie uns gerne auch zu Veranstaltungen wie der Simson SR2-Mopedrally, dem Plauener Spitzenfest oder zu Familienfeiern.</p></div>
+			<div class="ui-block-b"><img src="image/hausSommer.jpg" alt="Hausfront von der Straße aus gesehen" title="Hausfront von der Straße aus gesehen" /></div>
+		</div>
+	</div><!-- /content -->
+</div><!-- /page -->
+<div data-role="page" data-title="Anfahrt" id="anfahrt">
+	<div class="impressum">
+		<div class="ui-grid-solo">
+			<div class="ui-block-a"><a href="http://www.ferienwohnung-herrmann-weischlitz.de" alt="Ferienwohnung Herrmann Weischlitz" title="Ferienwohnung Herrmann Weischlitz"><img src="image/fwh_small.png" alt="www.ferienwohnung-herrmann-weischlitz.de" title="www.ferienwohnung-herrmann-weischlitz.de"></a></div>
+			<div class="ui-block-a">Plauener Str. 32, 08538 Weischlitz - Deutschland</div>
+			<div class="ui-block-a">Tel.: +49 (0)37436 84641</div>
+			<div class="ui-block-a">Mobil: +49 (0)171 9647038</div>
+			<div class="ui-block-a">E-Mail: <a href="mailto:uwe-herrmann@web.de">uwe-herrmann@web.de</a></div>
+			<div class="ui-block-a">Familie Uwe & Maria Herrmann</div>
+		</div>
+	</div>
+	<div role="main" class="ui-content">
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
+				<ul>
+					<li>Mit dem Auto
+					<p>
+						A72 Abfahrt Plauen / Pirk<br />
+						Richtung Globus (Einkaufsmarkt) / Weischlitz
+					</p>
+					<p>
+						A9 von Nürnberg - Abzweig Bayrisches Vogtland auf<br />
+						A72 Abfahrt Plauen / Pirk<br />
+						Richtung Globus (Einkaufsmarkt) / Weischlitz
+					</p>
+					<p>
+						A9 von Berlin - Abfahrt Schleiz<br />
+						Über</p>
+					<ul>
+						<li>B282 Richtung Plauen und B173 Richtung Hof <i>oder</i></li>
+						<li>B282 Über Mielesdorf - Unterkoskau - Stelzen - Reuth - Thossen nach Weischlitz</li>
+					</ul>
+					</li>
+						<br>
+						<li>Mit der Bahn
+						<p>
+							Bahnlinie Leipzig - Bad Brambach, Ausstieg in Weischlitz<br />
+							Bahnhof Weischlitz Bahnlinie Gera - Weischlitz (Bahn endet hier)
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="ui-block-b"><img src="image/karte.png" alt="Anfahrtskizze nach Weischlitz" title="Anfahrtskizze nach Weischlitz" /></div>
+		</div>
+	</div><!-- /content -->
+</div><!-- /page -->
+<div data-role="page" data-title="Preise" id="preise">
+	<div class="impressum">
+		<div class="ui-grid-solo">
+			<div class="ui-block-a"><a href="http://www.ferienwohnung-herrmann-weischlitz.de" alt="Ferienwohnung Herrmann Weischlitz" title="Ferienwohnung Herrmann Weischlitz"><img src="image/fwh_small.png" alt="www.ferienwohnung-herrmann-weischlitz.de" title="www.ferienwohnung-herrmann-weischlitz.de"></a></div>
+			<div class="ui-block-a">Plauener Str. 32, 08538 Weischlitz - Deutschland</div>
+			<div class="ui-block-a">Tel.: +49 (0)37436 84641</div>
+			<div class="ui-block-a">Mobil: +49 (0)171 9647038</div>
+			<div class="ui-block-a">E-Mail: <a href="mailto:uwe-herrmann@web.de">uwe-herrmann@web.de</a></div>
+			<div class="ui-block-a">Familie Uwe & Maria Herrmann</div>
+		</div>
+	</div>
+	<div role="main" class="ui-content">
+		<div class="ui-grid-a">
+			<!--<div class="ui-block-a">-->
+				<p>
+					Ferienwohnung für vier Personen, zusätzliche Aufbettungen möglich.</p>
+					<table border="1" summary="Preistabelle pro &Uuml;bernachtung">
+					<tr><th>Nächte</th><th>eine oder zwei Personen</th><th>3 Personen</th><th>4 Personen</th></tr>
+					<tr><td>1</td><td>40 €</td><td>60 €</td><td>80 €</td></tr>
+					<tr><td>2</td><td>72 €<!--<br>(36 € pro Nacht)--></td><td>108 €<!--<br>(54 € pro Nacht)--></td><td>144 €<!--<br>(72 € pro Nacht)--></td></tr>
+					<tr><td>3</td><td>96 €<!--<br>(32 € pro Nacht)--></td><td>144 €<!--<br>(48 € pro Nacht)--></td><td>192 €<!--<br>(64 € pro Nacht)--></td></tr>
+					<tr><td>4</td><td>128 €</td><td>192 €</td><td>256 €</td></tr>
+					<tr><td>5</td><td>160 €</td><td>240 €</td><td>320 €</td></tr>
+					<!--<tr><td>jede weitere</td><td>zzgl. 32 €</td><td>zzgl. 48 €</td><td>zzgl. 64 €</td></tr>-->
+				</table>
+				<p>
+					Für jede weitere Nacht erhalten Sie den Preis auf Anfrage.</p>
+				<p>
+					zuzüglich Endreinigung</p>
+				<ul>
+					<li>Kinder unter 14 Jahren 12 € pro Nacht</li>
+					<li>Kinder unter 6 Jahren sind frei</li>
+				</ul>
+				<p>
+					Bettwäsche und Handtücher werden gestellt.
+				</p>
+			<!--</div>-->
+			<!--<div class="ui-block-b">
+				<img src="image/haus1.jpg" alt="Hausfront mit Ferienwohnung im 1. Stock" title="Hausfront mit Ferienwohnung im 1. Stock" />
+			</div>-->
+		</div>
+	</div><!-- /content -->
+</div><!-- /page -->
+<div data-role="page" data-title="Ferienwohnung" id="ferienwohnung">
+	<div class="impressum">
+		<div class="ui-grid-solo">
+			<div class="ui-block-a"><a href="http://www.ferienwohnung-herrmann-weischlitz.de" alt="Ferienwohnung Herrmann Weischlitz" title="Ferienwohnung Herrmann Weischlitz"><img src="image/fwh_small.png" alt="www.ferienwohnung-herrmann-weischlitz.de" title="www.ferienwohnung-herrmann-weischlitz.de"></a></div>
+			<div class="ui-block-a">Plauener Str. 32, 08538 Weischlitz - Deutschland</div>
+			<div class="ui-block-a">Tel.: +49 (0)37436 84641</div>
+			<div class="ui-block-a">Mobil: +49 (0)171 9647038</div>
+			<div class="ui-block-a">E-Mail: <a href="mailto:uwe-herrmann@web.de">uwe-herrmann@web.de</a></div>
+			<div class="ui-block-a">Familie Uwe & Maria Herrmann</div>
+		</div>
+	</div>
+	<div role="main" class="ui-content">
+		<div class="ui-grid-solo">
+			<div class="ui-block-a"><h1>Die Räume der Ferienwohnung in Bildern</h1></div>
+		</div>
+		<div class="ui-grid-a">
+			<div class="ui-block-b">
+				<img class="galerie" id="wohnzimmer" src="image/zimmer/wohnzimmer.jpg" alt="Wohnzimmer mit Couch" title="Wohnzimmer mit Couch" />
+				<br />
+				<div class="element" for="wohnzimmer">Wohnzimmer mit Couch</div>
+			</div>
+			<div class="ui-block-b">
+				<img class="galerie" id="balkonzimmer" src="image/zimmer/balkonzimmer.jpg" alt="Balkonzimmer mit Schlafcouch" title="Balkonzimmer mit Schlafcouch" />
+				<br />
+				<div class="element" for="balkonzimmer">Balkonzimmer mit Schlafcouch</div>
+			</div>
+			<div class="ui-block-b">
+				<img class="galerie" id="schlafzimmer1" src="image/zimmer/schlafzimmer1.jpg" alt="1. Schlafzimmer mit Doppelbett" title="1. Schlafzimmer mit Doppelbett" />
+				<br />
+				<div class="element" for="schlafzimmer1">1. Schlafzimmer mit Doppelbett</div>
+			</div>
+			<div class="ui-block-b">
+				<img class="galerie" id="schlafzimmer2" src="image/zimmer/schlafzimmer2.jpg" alt="2. Schlafzimmer mit zwei Einzelbetten" title="2. Schlafzimmer mit zwei Einzelbetten" />
+				<br />
+				<div class="element" for="schlafzimmer2">2. Schlafzimmer mit zwei Einzelbetten</div>
+			</div>
+			<div class="ui-block-b">
+				<img class="galerie" id="kueche" src="image/zimmer/kueche.jpg" alt="Küche mit Herd, Mikrowelle und Spülmaschine" title="Küche mit Herd, Mikrowelle und Spülmaschine" />
+				<br />
+				<div class="element" for="kueche">Küche mit Herd, Mikrowelle und Spülmaschine</div>
+			</div>
+			<div class="ui-block-b">
+				<img class="galerie" id="flur" src="image/zimmer/flur.jpg" alt="Flur mit Garderobe" title="Flur mit Garderobe" />
+				<br />
+				<div class="element" for="flur">Flur mit Garderobe</div>
+			</div>
+		</div>
+	</div><!-- /content -->
+</div><!-- /page -->
+<div data-role="page" data-title="Links" id="links">
+	<div class="impressum">
+		<div class="ui-grid-solo">
+			<div class="ui-block-a"><a href="http://www.ferienwohnung-herrmann-weischlitz.de" alt="Ferienwohnung Herrmann Weischlitz" title="Ferienwohnung Herrmann Weischlitz"><img src="image/fwh_small.png" alt="www.ferienwohnung-herrmann-weischlitz.de" title="www.ferienwohnung-herrmann-weischlitz.de"></a></div>
+			<div class="ui-block-a">Plauener Str. 32, 08538 Weischlitz - Deutschland</div>
+			<div class="ui-block-a">Tel.: +49 (0)37436 84641</div>
+			<div class="ui-block-a">Mobil: +49 (0)171 9647038</div>
+			<div class="ui-block-a">E-Mail: <a href="mailto:uwe-herrmann@web.de">uwe-herrmann@web.de</a></div>
+			<div class="ui-block-a">Familie Uwe & Maria Herrmann</div>
+		</div>
+	</div>
+	<div role="main" class="ui-content">
+		<div class="ui-grid-solo">
+			<div class="ui-block-a">
+				<ul>
+					<li><a href="http://www.vogtlandtourist.de" target="_blank">www.vogtlandtourist.de</a></li>
+					<li><a href="http://www.burgstein.de" target="_blank">www.burgstein.de</a></li>
+					<li><a href="http://www.muehlenviertel-vogtland.de" target="_blank">www.muehlenviertel-vogtland.de</a></li>
+					<li><a href="http://www.weischlitz.de" target="_blank">www.weischlitz.de</a></li>
+					<li><a href="http://www.vogtland.de" target="_blank">www.vogtland.de</a></li>
+					<li><a href="http://www.burgentour.bike" target="_blank">www.burgentour.bike</a></li>
+				</ul>
+			</div>
+		</div>
+	</div><!-- /content -->
+</div><!-- /page -->
+<div class="header" data-role="header" data-position="fixed" data-theme="a" data-dismissible="false">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-prefetch="true" data-transition="slide" data-icon="home">Home</a></li>
+			<li><a href="#ferienwohnung" data-prefetch="true" data-transition="slide" data-icon="grid">Ferienwohnung</a></li>
+			<li><a href="#preise" data-prefetch="true" data-transition="slide" data-icon="info">Preise</a></li>
+			<li><a href="#anfahrt" data-prefetch="true" data-transition="slide" data-icon="location">Anfahrt</a></li>
+			<li><a href="#links" data-prefetch="true" data-transition="slide" data-icon="camera">Links</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /header -->
 </body>
 </html>
