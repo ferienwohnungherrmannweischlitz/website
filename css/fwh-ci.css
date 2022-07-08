@@ -435,10 +435,13 @@ h1, h2, h3, h4, h5, h6, div.header {
 div.header {
 	font-size:small;
 	left:auto; top:auto; right:auto;
-	background-image: url(../image/elstertal.jpg);
-    background-repeat: no-repeat;
-    background-position: center top;
+
 }
 div.header a {
 	color:#000000;
+}
+
+div.ui-block-b {
+	min-width: 160px;
+	max-width: 360px;
 }
