@@ -1,0 +1,34 @@
+body {
+    font-family:Helvetica,Arial,sans-serif;
+    font-size:0.91em;
+}
+body > div > div > img {
+	position:absolute;
+	top:15em; right:5em;
+	width:25%;
+	float:left;
+}
+img {
+	max-width:98%;
+	position:relative;
+	left:1%;right:1%;
+}
+h1, h2, h3, h4, h5, h6, div.header {
+	text-align:center;
+}
+div.header {
+	font-size:small;
+	left:auto; top:auto; right:auto;
+	background-image: url(../image/elstertal.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+div.header a {
+	color:#000000;
+}
+div.header div.ui-grid-a div.ui-block-a {
+	text-align:right;
+}
+div.header div.ui-grid-a div.ui-block-b {
+	text-align:left;
+}

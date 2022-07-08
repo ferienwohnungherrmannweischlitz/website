@@ -1,5 +1,4 @@
-﻿body 
-{
+body  {
     color: black;
     background-color: #336699;
     font-family: Helvetica,Arial,sans-serif;
@@ -7,45 +6,40 @@
     font-size: 0.91em;
     min-width: 652px;
 }
-div#Logo
-{
+div#Logo {
     width: 100%;
     height: 8em;
     text-align: right;
+	margin-top: 0px;
     margin-left: auto;
     margin-right: 0;
+	margin-bottom: 1%;
     background-image: url(../image/elstertal.jpg);
     background-repeat: no-repeat;
     background-position: center top;
-    padding-bottom: 1em;
 }
-div#Navigation
-{
+div#Navigation {
     float: left;
     text-align: center;
     background: #FFFFCC;
-    width: 19.4%;
+    width: 19.5%;
 }
-div#Navigation a.element 
-{
+div#Navigation a.element  {
     display: block;
     padding: 0.4em;
 }
-div#Navigation p 
-{
+div#Navigation p  {
     padding: 0.5em;
     font-size: x-small;
 }
-div#Inhalt 
-{
+div#Inhalt  {
     float: left;
     margin-left: 1%;
-    width: 79.4%;
+    width: 79.5%;
     background: #99CCFF;
     min-width: 16em;
 }
-div#Inhalt h1 
-{
+div#Inhalt h1  {
     padding: 0 10px 0 10px;
     font-size: 1.5em;
 }
@@ -57,8 +51,20 @@ div#Inhalt p {
     padding: 0 10px 0 10px;
     font-size: 1em;
 }
-div#Inhalt img {
+div#Inhalt img.normal {
     float: right;
     padding: 0 0 0 10px;
-    width: 33%;
+	width: 33%;
+}
+div#Inhalt div.galerie {
+    padding: 10px;
+    float: left;
+    width: 45%;
+}
+div#Inhalt img.galerie {
+    width: 90%;
+}
+div.element  {
+    display: block;
+	min-height: 3em;
 }
